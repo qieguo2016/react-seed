@@ -2,7 +2,7 @@
  * @authors     : qieguo
  * @date        : 2016/11/11
  * @version     : 1.0
- * @description :
+ * @description : 定义应用页面骨架和路由配置
  */
 
 'use strict';

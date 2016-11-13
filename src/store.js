@@ -2,7 +2,7 @@
  * @authors     : qieguo
  * @date        : 2016/11/11
  * @version     : 1.0
- * @description :
+ * @description : 数据store，目前未应用中间件
  */
 
 'use strict';

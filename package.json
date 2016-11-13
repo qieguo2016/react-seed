@@ -1,8 +1,13 @@
 {
   "name": "apptpl",
   "version": "0.0.0",
-  "description": "an web app dev env",
+  "description": "a react project seed",
   "main": "./src/index.js",
+  "author": {
+    "name": "qieguo",
+    "email": "qieguo.chow@gmail.com",
+    "url": "https://github.com/qieguo2016"
+  },
   "scripts": {
     "dev": "webpack-dev-server --hot --inline --progress --colors --port 8008",
     "build": "rimraf ./dist & webpack --progress --profile --colors --config webpack.production.config.js"
@@ -38,5 +43,13 @@
     "webpack": "^1.12.2",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-dev-server": "^1.12.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qieguo2016/react-seed.git"
+  },
+  "bugs": {
+    "url": "https://github.com/qieguo2016/react-seed/issues"
+  },
+  "license": "MIT"
 }

@@ -2,7 +2,7 @@
  * @authors     : qieguo
  * @date        : 2016/11/11
  * @version     : 1.0
- * @description :
+ * @description : 应用入口，主要是引入了数据store
  */
 
 

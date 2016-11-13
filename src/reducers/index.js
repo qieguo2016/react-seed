@@ -2,9 +2,8 @@
  * @authors     : qieguo
  * @date        : 2016/11/11
  * @version     : 1.0
- * @description :
+ * @description : reducer入口，引入各种reducer并合并成一个大reducer
  */
-
 
 'use strict';
 
