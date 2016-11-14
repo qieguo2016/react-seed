@@ -6,7 +6,7 @@
  */
 
 'use strict';
-
+import * as types from '../actions/ActionTypes';
 // import {combineReducers } from 'redux';
 // import MdCount from './md';
 // import MyCount from './my';
@@ -14,11 +14,11 @@
 // const Reducers = combineReducers({MdCount,MyCount});
 
 // Reducer
-function Reducers(state = { count: 0 }, action) {
+function Reducers(state = {count: 0}, action) {
 	const count = state.count
 	switch (action.type) {
-		case 'increase':
-			return { count: count + 1 };
+		case types.INCREASE:
+			return {count: count + 1};
 		default:
 			return state;
 	}

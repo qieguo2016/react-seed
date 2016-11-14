@@ -2,7 +2,7 @@
  * @authors     : qieguo
  * @date        : 2016/11/11
  * @version     : 1.0
- * @description : 应用入口，主要是引入了数据store
+ * @description : 应用入口，引入数据store和APP骨架
  */
 
 
@@ -10,10 +10,10 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import {Provider} from 'react-redux';
+
 import store from './store';
-import App from './App';
+import App from './containers/App';
 
 ReactDOM.render((
 	<Provider store={store}>

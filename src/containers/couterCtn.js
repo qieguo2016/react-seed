@@ -7,7 +7,7 @@
 
 'use strict';
 
-import {connect} from 'react-redux'
+import {connect} from 'react-redux';
 import Counter from '../components/counter/Counter';
 import {increaseAction} from '../actions/actions';
 

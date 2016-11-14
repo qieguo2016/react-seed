@@ -9,10 +9,5 @@
 
 import * as types from './ActionTypes';
 
-const increaseAction = {type: types.INCREASE};
-const decreaseAction = {type: types.DECREASE};
-
-export {
-	increaseAction,
-	decreaseAction
-};
+export const increaseAction = {type: types.INCREASE};
+export const decreaseAction = {type: types.DECREASE};

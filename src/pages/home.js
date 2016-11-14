@@ -9,7 +9,7 @@
 "use strict";
 
 import React, {Component} from 'react';
-import CouterCtn from '../containers/couterCtn'
+import CouterCtn from '../containers/CouterCtn'
 
 class Home extends Component {
 	render() {

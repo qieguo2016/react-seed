@@ -9,8 +9,8 @@
     "url": "https://github.com/qieguo2016"
   },
   "scripts": {
-    "dev": "webpack-dev-server --hot --inline --progress --colors --port 8008",
-    "build": "rimraf ./dist & webpack --progress --profile --colors --config webpack.production.config.js"
+    "dev": "webpack-dev-server --hot --inline --progress --colors --config webpack.config.dev.js",
+    "build": "rimraf ./dist & webpack --progress --profile --colors --config webpack.config.prod.js"
   },
   "dependencies": {
     "react": "^15.1.0",
@@ -35,7 +35,6 @@
     "open-browser-webpack-plugin": "0.0.1",
     "postcss-loader": "^0.8.2",
     "rimraf": "^2.5.4",
-    "sass": "^0.5.0",
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.0",
     "uglify-loader": "^1.2.0",
