@@ -25,9 +25,9 @@ config.devServer = {
 	proxy             : {
 		"/api": {
 			"target"    : {
-				"host"    : "www.baidu",
+				"host"    : "192.168.101.101",
 				"protocol": 'http:',
-				"port"    : 80
+				"port"    : 6080
 			},
 			ignorePath  : true,
 			changeOrigin: true,

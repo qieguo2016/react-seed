@@ -12,7 +12,7 @@ import {Router, Route, IndexRoute, Link, IndexLink, hashHistory} from 'react-rou
 
 import Home from '../pages/home';
 import Login from '../pages/login';
-import Root from '../components/root/Root';
+import Root from '../components/Root';
 
 class App extends Component {
 	render() {
