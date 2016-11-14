@@ -14,7 +14,7 @@ import * as types from '../actions/ActionTypes';
 // const Reducers = combineReducers({MdCount,MyCount});
 
 // Reducer
-function Reducers(state = {count: 0}, action) {
+function reducers(state = {count: 0}, action) {
 	const count = state.count
 	switch (action.type) {
 		case types.INCREASE:
@@ -23,4 +23,4 @@ function Reducers(state = {count: 0}, action) {
 			return state;
 	}
 }
-export default Reducers;
+export default reducers;

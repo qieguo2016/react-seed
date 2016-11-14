@@ -10,4 +10,11 @@
 import * as types from './ActionTypes';
 
 export const increaseAction = {type: types.INCREASE};
-export const decreaseAction = {type: types.DECREASE};
+
+export const decreaseAction = {
+	type   : types.DECREASE,
+	payload: {
+		num: 10
+	}
+};
+

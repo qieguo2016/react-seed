@@ -7,8 +7,20 @@
 
 'use strict';
 
-import { createStore} from 'redux';
-import Reducers from './reducers/index'; 	//Reducers
+// 不使用中间件
+// import { createStore} from 'redux';
+// import reducers from './reducers/index'; 	//Reducers
+//
+// export let store = createStore(reducers);
 
-let store = createStore(Reducers);
+// 使用中间件
+import {createStore, applyMiddleware} from 'redux';
+import thunk from 'redux-thunk';
+import reducers from './reducers/index';
+
+const store = createStore(
+	reducers,
+	applyMiddleware(thunk)
+);
+
 export default store;

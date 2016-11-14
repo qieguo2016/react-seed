@@ -30,7 +30,7 @@ module.exports = {
         filename: '[name].[hash].js',
         // chunkFilename，name在代码中指定，若无则为id
         chunkFilename: '[name].[chunkhash:5].chunk.js',
-        // 输出分片文件目录
+        // CDN目录路径
         publicPath   : '/'
     },
 
