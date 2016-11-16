@@ -2,7 +2,7 @@
  * @authors     : qieguo
  * @date        : 2016/11/16
  * @version     : 1.0
- * @description :
+ * @description : 开发服务器
  */
 
 'use strict';
@@ -16,32 +16,24 @@ var app = express();
 var compiler = webpack(config);
 
 app.use(require('webpack-dev-middleware')(compiler, {
-	noInfo: true,
+	noInfo    : true,
 	publicPath: config.output.publicPath,
-	stats: {
+	stats     : {
 		colors: true
 	}
 }));
 
 app.use(require('webpack-hot-middleware')(compiler));
 
-app.use('/wm_static', express.static('lib'));
-app.use('/wm_static/css', express.static('css'));
-app.use('/wm_static/images', express.static('images'));
-app.use('/wm_static', express.static('wm_static'));
+app.use(express.static(path.join(__dirname, 'public')));
 
-
-app.get('*', function(req, res) {
+app.get('*', function (req, res) {
 	res.sendFile(path.join(__dirname, 'index.html'));
 });
-/*app.get('*', function (req, res, next) {
- res.render('index.html');
- });*/
-app.listen(3002, function(err) {
-	if (err) {
-		console.log(err);
-		return;
-	}
 
-	console.log('Listening at http://localhost:3002');
+app.listen(8081, function (err) {
+	if (err) {
+		return console.error(err);
+	}
+	console.log('Listening at http://localhost:8081');
 });
