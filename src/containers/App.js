@@ -11,13 +11,13 @@ import React, {Component} from 'react';
 import {Router, Route, IndexRoute, hashHistory} from 'react-router';
 
 import Home from '../pages/home';
-import Root from '../components/Root';
+import Layout from '../components/layout/layout';
 
 class App extends Component {
 	render() {
 		return (
 			<Router history={hashHistory}>
-				<Route path="/" component={Root}>
+				<Route path="/" component={Layout}>
 					<IndexRoute component={Home}/>
 					<Route path="/center" getComponent={(location, cb) => {
 						require.ensure([], require => {

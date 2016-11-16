@@ -21,8 +21,7 @@ config.plugins.push(
 		compress: {warnings: false},
 		sourceMap: false,
 		mangle: true
-	}),
-
+	})
 );
 
 module.exports = config;

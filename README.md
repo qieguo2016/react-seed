@@ -17,10 +17,10 @@ webpack + react + react-router + react-redux 搭建纯静态页面型前端工�
 │   │   ├── b                      # b组件
 │   │   │   ├── b.js               # b组件入口
 │   │   │   └── b.scss             # b组件样式
-│   │   └── Root.js                # 应用骨架，包括公共导航页面，侧边栏等
+│   │   └── layout.js                # 应用骨架，包括公共导航页面，侧边栏等
 │   ├── containers/                # 容器,连接UI组件和状态仓库
 │   │   └── App.js                 # 应用，加载骨架和配置路由
-│   ├── imgs/                      # 图片资源
+│   ├── images/                      # 图片资源
 │   ├── pages                      # 页面
 │   │   ├── a.js                   # a页面入口
 │   │   ├── b.js                   # b页面入口

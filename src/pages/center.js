@@ -15,6 +15,7 @@ export default class Center extends Component {
 		return (
 			<div className="Center">
 				<p>This is Center page</p>
+				<img src={require("../images/img.jpg")}/>
 			</div>
 		);
 	}
