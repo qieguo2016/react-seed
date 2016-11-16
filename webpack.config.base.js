@@ -20,7 +20,7 @@ module.exports = {
 
     // 项目入口，默认为目录下的index.js；vendor为第三方库，可以分开打包。
     entry: {
-        app: SRC_PATH,
+        app: path.join(SRC_PATH, 'entry.js'),
         vendor: ['react',  'react-dom','react-router','react-redux','redux']
     },
 
@@ -30,7 +30,7 @@ module.exports = {
         filename: '[name].[hash].js',
         // chunkFilename，name在代码中指定，若无则为id
         chunkFilename: '[name].[chunkhash:5].chunk.js',
-        // CDN目录路径
+        // CDN目录路径，插入html中的src
         publicPath   : '/'
     },
 

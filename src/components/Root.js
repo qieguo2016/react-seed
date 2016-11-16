@@ -16,7 +16,7 @@ class Root extends Component {
 				<h1>This is common area</h1>
 				<ul>
 					<li><IndexLink to="/" activeClassName="active">Home</IndexLink></li>
-					<li><Link to="/login" activeClassName="active">Login</Link></li>
+					<li><Link to="/counter" activeClassName="active">Counter</Link></li>
 					<li><Link to="/center" activeClassName="active">Center</Link></li>
 				</ul>
 				{this.props.children}

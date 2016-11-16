@@ -8,10 +8,9 @@
 'use strict';
 
 import React, {Component} from 'react';
-import {Router, Route, IndexRoute, Link, IndexLink, hashHistory} from 'react-router';
+import {Router, Route, IndexRoute, hashHistory} from 'react-router';
 
 import Home from '../pages/home';
-import Login from '../pages/login';
 import Root from '../components/Root';
 
 class App extends Component {
@@ -25,7 +24,11 @@ class App extends Component {
 							cb(null, require('../pages/center').default)
 						}, "center");
 					}}/>
-					<Route path="/login" component={Login}/>
+					<Route path="/counter" getComponent={(location, cb) => {
+						require.ensure([], require => {
+							cb(null, require('../pages/count').default)
+						}, "count");
+					}}/>
 				</Route>
 			</Router>
 		);

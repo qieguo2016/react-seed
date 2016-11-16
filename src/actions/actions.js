@@ -11,6 +11,12 @@ import * as types from './ActionTypes';
 
 export const increaseAction = {type: types.INCREASE};
 
+export function increaseAsync() {
+	return dispatch => {
+		setTimeout(() => dispatch(increaseAction), 2000)
+	}
+}
+
 export const decreaseAction = {
 	type   : types.DECREASE,
 	payload: {
@@ -18,3 +24,15 @@ export const decreaseAction = {
 	}
 };
 
+export function greet(words) {
+	return {
+		type: types.GREET,
+		payload: words
+	};
+}
+
+export function greetAsync(words) {
+	return dispatch => {
+		setTimeout(() => dispatch(greet(words)), 2000);
+	}
+}

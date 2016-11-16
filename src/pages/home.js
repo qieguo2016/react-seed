@@ -9,14 +9,14 @@
 "use strict";
 
 import React, {Component} from 'react';
-import CouterCtn from '../containers/CouterCtn'
+import GreetCtn from '../containers/GreetCtn'
 
 class Home extends Component {
 	render() {
 		return (
 			<div className="Home">
-				<p>This is Home page with counter</p>
-				<CouterCtn/>
+				<p>This is Home page with Greet</p>
+				<GreetCtn/>
 			</div>
 		);
 	}
