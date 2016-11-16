@@ -2,13 +2,14 @@
  * @authors     : qieguo
  * @date        : 2016/11/14
  * @version     : 1.0
- * @description : 应用骨架、导航等公共部分
+ * @description : 应用骨架、导航等公共部分，纯UI组件（要点：纯函数）
  */
 
 'use strict';
 
 import React, {Component} from 'react';
 import {Link, IndexLink} from 'react-router';
+
 import './layout.scss';
 
 class Layout extends Component {

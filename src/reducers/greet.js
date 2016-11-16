@@ -2,7 +2,7 @@
  * @authors     : qieguo
  * @date        : 2016/11/16
  * @version     : 1.0
- * @description :
+ * @description : 拆分后的reducer
  */
 
 'use strict';

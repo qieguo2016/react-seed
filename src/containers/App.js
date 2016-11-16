@@ -2,7 +2,8 @@
  * @authors     : qieguo
  * @date        : 2016/11/11
  * @version     : 1.0
- * @description : 定义路由配置
+ * @description : 引入页面布局、定义路由配置。
+ * 				  路由可以做成按需加载和普通加载，按需加载的模块如果使用ES6，则需要加default，也就是要获得模块输出对象。
  */
 
 'use strict';

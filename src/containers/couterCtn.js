@@ -2,7 +2,9 @@
  * @authors     : qieguo
  * @date        : 2016/11/11
  * @version     : 1.0
- * @description :
+ * @description : redux容器组件。
+ * 				  注意state的结构，要获取相应reducer中的数据
+ * 				  注意派发Action要区分 Action Creator函数或者 纯Action
  */
 
 'use strict';
