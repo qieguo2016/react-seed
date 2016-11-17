@@ -9,9 +9,12 @@
 
 module.exports = {
 
-	isDev: true,
+	isDev: false,
 
 	// 程序运行的端口
+
+	host: 'localhost',
+
 	devPort: 8081,
 
 	testPort: 8082,

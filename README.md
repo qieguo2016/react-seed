@@ -39,7 +39,7 @@ webpack + react + react-router + react-redux 搭建纯静态页面型前端工�
 ├── package.json                   # npm配置
 ├── README.md                      # readme文件
 ├── webpack.config.base.js         # webpack基础配置
-├── webpack.config.dev.server.js          # 开发环境配置
+├── webpack.config.dev.server_new.js          # 开发环境配置
 └── webpack.config.prod.js         # 正式环境配置
 ```
 

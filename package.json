@@ -11,7 +11,7 @@
   "scripts": {
     "dev": "webpack-dev-server --hot --inline --progress --colors --config webpack.config.dev.js",
     "build": "rimraf ./dist & webpack --progress --profile --colors --config webpack.config.prod.js",
-    "devServer": "node server/server.js",
+    "devServer": "node server.js",
     "prodServer": "cross-env NODE_ENV=production webpack --config build/webpack.client.config.js --progress --hide-modules"
   },
   "dependencies": {
@@ -44,7 +44,7 @@
     "uglify-loader": "^1.2.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.2",
-    "webpack-dev-middleware": "^1.6.1",
+    "webpack-dev-middleware": "^1.8.4",
     "webpack-dev-server": "^1.12.1",
     "webpack-hot-middleware": "^2.13.2"
   },
