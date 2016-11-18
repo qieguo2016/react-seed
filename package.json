@@ -11,7 +11,7 @@
   "scripts": {
     "dev": "webpack-dev-server --hot --inline --progress --colors --config webpack.config.dev.js",
     "build": "rimraf ./dist & webpack --progress --profile --colors --config webpack.config.prod.js",
-    "devServer": "node server.js",
+    "devServer": "node ./server/server.js",
     "prodServer": "cross-env NODE_ENV=production webpack --config build/webpack.client.config.js --progress --hide-modules"
   },
   "dependencies": {

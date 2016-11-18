@@ -13,43 +13,48 @@ const express = require('express');
 const webpack = require('webpack');
 const webpackMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
-const config = require('./webpack.config.js');
 
-const isDeveloping = process.env.NODE_ENV !== 'production';
-const port = isDeveloping ? 3000 : process.env.PORT;
+const webpackConfig = require('./webpack.config.dev.server');
+const config = require('../config');
+
+const isDev = config.isDev || ('production' !== process.env.NODE_ENV);
+const HOST = config.host || 'localhost';
+const PORT = config.devPort || 8081;
 const app = express();
 
-if (isDeveloping) {
-	const compiler = webpack(config);
-	const middleware = webpackMiddleware(compiler, {
-		publicPath: config.output.publicPath,
-		contentBase: 'src',
-		stats: {
-			colors: true,
-			hash: false,
-			timings: true,
-			chunks: false,
-			chunkModules: false,
-			modules: false
-		}
-	});
+const serverConfig = {
+	publicPath : webpackConfig.output.publicPath,
+	contentBase: 'src',
+	quiet      : false,
+	noInfo     : false,
+	hot        : true,
+	inline     : true,
+	lazy       : false,
+	headers    : {'Access-Control-Allow-Origin': '*'},
+	stats      : {
+		colors      : true,
+		hash        : true,
+		timings     : true,
+		chunks      : true,
+		chunkModules: true,
+		modules     : true
+	}
+};
 
-	app.use(middleware);
+if (isDev) {
+	const compiler = webpack(webpackConfig);
+	app.use(webpackMiddleware(compiler, serverConfig));
 	app.use(webpackHotMiddleware(compiler));
-	app.get('*', function response(req, res) {
-		res.write(middleware.fileSystem.readFileSync(path.join(__dirname, 'dist/index.html')));
-		res.end();
-	});
 } else {
 	app.use(express.static(__dirname + '/dist'));
-	app.get('*', function response(req, res) {
+	app.get('*', function (req, res) {
 		res.sendFile(path.join(__dirname, 'dist/index.html'));
 	});
 }
 
-app.listen(port, '0.0.0.0', function onStart(err) {
+app.listen(PORT, function (err) {
 	if (err) {
-		console.log(err);
+		return console.log(err);
 	}
-	console.info('==> 🌎 Listening on port %s. Open up http://0.0.0.0:%s/ in your browser.', port, port);
+	console.info(`==>  Listening on http://${HOST}:${PORT}.`);
 });
