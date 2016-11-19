@@ -5,29 +5,34 @@
  * @description : 本地开发环境配置
  */
 
+	// "dev": "webpack-dev-server --hot --inline --progress --colors --config webpack.config.dev.js",
+
 const webpack = require('webpack');
 const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
-const config = require('./webpack.config.base');
-const PORT = '8081';
+const webpackConfig = require('./webpack.config.base');
+const config = require('./config');
+const frontPORT = config.frontPort;
+const devPORT = config.devPort;
 
 // 开发工具,出错之后可以快速定位出错代码位置
-config.devtool = 'eval-source-map';
+webpackConfig.devtool = 'eval-source-map';
 
 // 本地开发用的简易服务器
-config.devServer = {
+webpackConfig.devServer = {
 	historyApiFallback: true,
 	hot               : true,
 	inline            : true,
 	progress          : true,
+	colors            : true,
 	clientLogLevel    : "info",
-	port              : PORT,
+	port              : frontPORT,
 	proxy             : {
 		"/api": {
 			"target"    : {
-				"host"    : "192.168.101.101",
+				"host"    : "localhost",
 				"protocol": 'http:',
-				"port"    : 6080
+				"port"    : devPORT
 			},
 			ignorePath  : true,
 			changeOrigin: true,
@@ -36,7 +41,7 @@ config.devServer = {
 	},
 };
 
-config.plugins.push(
+webpackConfig.plugins.push(
 	// 是否启用调试模式，输出调试信息
 	new webpack.DefinePlugin({
 		DEBUG: true
@@ -49,7 +54,7 @@ config.plugins.push(
 	// }),
 
 	// 自动打开浏览器窗口
-	new OpenBrowserPlugin({url: `http://localhost:${PORT}`})
+	new OpenBrowserPlugin({url: `http://localhost:${frontPORT}`})
 );
 
-module.exports = config;
+module.exports = webpackConfig;

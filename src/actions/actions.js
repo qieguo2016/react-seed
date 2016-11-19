@@ -26,13 +26,21 @@ export const decreaseAction = {
 
 export function greet(words) {
 	return {
-		type: types.GREET,
+		type   : types.GREET,
 		payload: words
 	};
 }
 
-export function greetAsync(words) {
+export function order(params) {
+	return {
+		type   : types.ORDER,
+		payload: params
+	}
+}
+
+export function greetAsync(params) {
 	return dispatch => {
-		setTimeout(() => dispatch(greet(words)), 2000);
+
+		setTimeout(() => dispatch(greet(params)), 2000);
 	}
 }

@@ -15,7 +15,7 @@ class Greet extends Component {
 		return (
 			<div>
 				<p>word: {words}</p>
-				<button onClick={onGreetClick}>say something</button>
+				<button onClick={onGreetClick}>order something</button>
 			</div>
 		)
 	}

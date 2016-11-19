@@ -15,9 +15,11 @@ module.exports = {
 
 	host: 'localhost',
 
+	frontPort: 8080,
+
 	devPort: 8081,
 
 	testPort: 8082,
 
-	prodPort: 8083,
+	prodPort: 8083
 }

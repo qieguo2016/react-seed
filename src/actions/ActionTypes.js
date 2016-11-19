@@ -10,6 +10,7 @@ export const DECREASE = 'DECREASE';
 
 export const GREET = 'GREET';
 
+export const ORDER = 'ORDER';
 
 
 
