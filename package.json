@@ -16,6 +16,8 @@
     "prodServer": "cross-env NODE_ENV=production webpack --config build/webpack.client.config.js --progress --hide-modules"
   },
   "dependencies": {
+    "es6-promise": "^4.0.5",
+    "isomorphic-fetch": "^2.2.1",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "react-redux": "^4.4.5",
